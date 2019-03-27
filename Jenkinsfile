@@ -6,10 +6,9 @@ pipeline {
 
   }
   stages {
-    stage('Test') {
+    stage('back-end') {
       steps {
-        sh '''node --version
-df -h'''
+        sh 'mvn --version'
       }
     }
   }
