@@ -9,7 +9,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''node --version
-docker image ls -a'''
+df -h'''
       }
     }
   }
