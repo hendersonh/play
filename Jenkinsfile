@@ -23,7 +23,7 @@ pipeline {
     }
     stage('docker info') {
       steps {
-        sh 'docker info'
+        sh 'cat /etc/passwd'
       }
     }
   }
