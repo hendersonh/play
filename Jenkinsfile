@@ -27,9 +27,7 @@ pipeline {
       steps {
         sh 'node --version'
       }
-      
     }
-    
     stage('web-server') {
       agent {
         docker {
@@ -40,6 +38,6 @@ pipeline {
       steps {
         sh 'uname -n'
       }
-    } 
+    }
   }
 }
