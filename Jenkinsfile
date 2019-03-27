@@ -1,12 +1,14 @@
 pipeline {
-  agent any
-  stages {
-    stage('pull nginx') {
-      steps {
-        dockerNode(image: 'nginx') {
-          sh 'echo date'
-        }
+  agent {
+    docker {
+      image 'node:7-alpine'
+    }
 
+  }
+  stages {
+    stage('Test') {
+      steps {
+        sh 'node --version'
       }
     }
   }
