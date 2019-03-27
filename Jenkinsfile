@@ -27,11 +27,20 @@ pipeline {
       steps {
         sh 'node --version'
       }
+      
     }
-    stage('Web-server') {
-      steps {
-        sh 'echo /etc/passwd'
+    
+    stage('web-server') {
+      agent {
+        docker {
+          image 'ubuntu'
+        }
+
       }
+      steps {
+        sh 'uname -n'
+      }
+      
     }
-  }
+    
 }
