@@ -10,7 +10,7 @@ pipeline {
         }
         stage('show top') {
           steps {
-            sh 'top'
+            sh '/usr/bin/top'
           }
         }
       }
