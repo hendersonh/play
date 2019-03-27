@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('print_user_name') {
       steps {
-        sh 'echo "My name is Henderson Hood"'
+        sh 'echo "My name "$USER"'
       }
     }
   }
