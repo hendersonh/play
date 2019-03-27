@@ -21,6 +21,11 @@ pipeline {
         sh 'echo "My name is : $USER"'
       }
     }
+    stage('List processes') {
+      steps {
+        sh 'ps -a'
+      }
+    }
   }
   environment {
     USER = 'Henderson'
