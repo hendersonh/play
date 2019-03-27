@@ -1,14 +1,12 @@
 pipeline {
   agent any
   stages {
-    stage('print_user_name') {
+    stage('tet') {
       steps {
-        sh 'echo "My name $USER"'
-      }
-    }
-    stage('list files') {
-      steps {
-        sh 'ls -l'
+        dockerNode(image: 'nginx') {
+          sh 'uname -a'
+        }
+
       }
     }
   }
