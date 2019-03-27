@@ -21,9 +21,9 @@ pipeline {
         sh 'echo "My name is : $USER"'
       }
     }
-    stage('List processes') {
+    stage('docker info') {
       steps {
-        sh 'ps -a'
+        sh 'docker info'
       }
     }
   }
