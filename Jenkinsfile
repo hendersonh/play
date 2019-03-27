@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Pull node:7-alpine image') {
       steps {
-        sh 'node --verion'
+        sh 'sh echo "this is a test"'
       }
     }
   }
