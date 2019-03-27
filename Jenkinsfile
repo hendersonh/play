@@ -6,7 +6,7 @@ pipeline {
 
   }
   stages {
-    stage('Pull node:7-alpine image') {
+    stage('Test node') {
       steps {
         sh 'echo "this is a test"'
       }
