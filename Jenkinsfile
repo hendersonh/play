@@ -6,9 +6,9 @@ pipeline {
         sh 'echo "My name $USER"'
       }
     }
-    stage('show top') {
+    stage('list files') {
       steps {
-        sh 'top'
+        sh 'ls -l'
       }
     }
   }
