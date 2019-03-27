@@ -6,7 +6,7 @@ pipeline {
 
   }
   stages {
-    stage('Test') {
+    stage('Pull node:7-alpine image') {
       steps {
         sh '''node --version
 df -h'''
