@@ -16,5 +16,10 @@ pipeline {
         sh 'ls -l'
       }
     }
+    stage('Say my name') {
+      steps {
+        sh 'echo "My name is : $USER"'
+      }
+    }
   }
 }
