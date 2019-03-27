@@ -11,5 +11,10 @@ pipeline {
         sh 'echo "this is a test"'
       }
     }
+    stage('List files') {
+      steps {
+        sh 'ls -l'
+      }
+    }
   }
 }
