@@ -1,10 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('tet') {
+    stage('pull nginx') {
       steps {
         dockerNode(image: 'nginx') {
-          sh 'uname -a'
+          sh 'echo date'
         }
 
       }
