@@ -1,5 +1,10 @@
 pipeline {
-  agent none
+  agent {
+    docker {
+      image 'nginx'
+    }
+
+  }
   stages {
     stage('Back-end') {
       agent {
@@ -21,6 +26,11 @@ pipeline {
       }
       steps {
         sh 'node --version'
+      }
+    }
+    stage('Web-server') {
+      steps {
+        sh 'echo /etc/passwd'
       }
     }
   }
